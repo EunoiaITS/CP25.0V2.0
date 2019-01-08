@@ -11,10 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('auth/login');
-});
+// Route::get('/', function () {
+//     return view('users/login');
+// });
+Route::get('/', 'UsersController@login');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('login', [
+  'as' => 'login',
+  'uses' => 'UsersController@login'
+]);
+
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'UsersController@login');
+
+Route::post('/login', 'UsersController@login');
+Route::get('/logout', 'UsersController@logout');
+
+Route::get('/admin', 'AdminController@index');
+Route::get('/author', 'AuthorController@index');
+Route::get('/subscriber', 'SubscriberController@index');
