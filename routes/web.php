@@ -29,6 +29,9 @@ Route::get('/home', 'UsersController@login');
 Route::post('/login', 'UsersController@login');
 Route::get('/logout', 'UsersController@logout');
 
+// Admin routes
 Route::get('/admin', 'AdminController@index');
+Route::resource('/admin/users', 'AdminUsersController');
+
 Route::get('/author', 'AuthorController@index');
 Route::get('/subscriber', 'SubscriberController@index');
