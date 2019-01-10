@@ -9,7 +9,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
                 
                 <div class="card-body">
-                    <form method="POST" action="/login">
+                    <form method="POST" action="{{ url('/login') }}">
                         @csrf
 
                         @if(session()->has('error-message'))

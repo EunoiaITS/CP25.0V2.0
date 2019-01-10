@@ -17,7 +17,7 @@ class AuthorMiddleware
     public function handle($request, Closure $next)
     {
         if(!Auth::user() || Auth::user()->role != 'author')
-            return redirect('/');
+            abort(404);
 
         return $next($request);
     }

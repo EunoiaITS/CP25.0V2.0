@@ -3,7 +3,7 @@
 @section('content')
 
 	<ol class="breadcrumb">
-	  	<li><a href="/admin">Dashboard</a></li>
+	  	<li><a href="{{ url('/admin') }}">Dashboard</a></li>
 	  	<li class="active">Manage Users</li>
 	</ol>
 
@@ -13,7 +13,7 @@
         </p>
     @endif
 
-	<a href="/admin/users/create" class="btn btn-primary pull-right" style="background: black;">
+	<a href="{{ url('/admin/users/create') }}" class="btn btn-primary pull-right" style="background: black;">
 		<i class="fa fa-plus-circle"></i> Create New User
 	</a>
 	<div class="clearfix"></div><br>

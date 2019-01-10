@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Naisse</a>
+        <a class="navbar-brand" href="{{ url('/') }}">Naisse</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -24,7 +24,7 @@
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
             </ul>
             <!-- /.dropdown-user -->
@@ -37,11 +37,11 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
-                    <a href="/admin" class="<?php if($page_name == 'dashboard') echo 'active'; ?>">
+                    <a href="{{ url('/admin') }}" class="<?php if($page_name == 'dashboard') echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Admin Dashboard
                     </a>
-                    <a href="/admin/users" class="<?php if($page_name == 'users') echo 'active'; ?>">
+                    <a href="{{ url('/admin/users') }}" class="<?php if($page_name == 'users') echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Manage Users
                     </a>

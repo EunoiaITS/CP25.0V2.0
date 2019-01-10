@@ -3,8 +3,8 @@
 @section('content')
 
 	<ol class="breadcrumb">
-	  	<li><a href="/admin">Dashboard</a></li>
-	  	<li><a href="/admin/users">Manage Users</a></li>
+	  	<li><a href="{{ url('/admin') }}">Dashboard</a></li>
+	  	<li><a href="{{ url('/admin/users') }}">Manage Users</a></li>
 	  	<li class="active">Create User</li>
 	</ol>
 
@@ -19,7 +19,7 @@
 	            </div>
 	            <div class="panel-body">
 
-	            	<form action="/admin/users" method="post" class="form-horizontal form-groups-bordered">
+	            	<form action="{{ action('AdminUsersController@store') }}" method="post" class="form-horizontal form-groups-bordered">
 	            		@csrf
 		                <div class="form-group">
 		                    <label for="field-1" class="col-sm-3 control-label">Name</label>
@@ -53,7 +53,6 @@
 		                            <option value="">Select a role</option>
 		                            <option value="admin">Admin</option>
 		                            <option value="author">Author</option>
-		                            <option value="subscriber">Subscriber</option>
 		                        </select>
 		                    </div>
 		                </div>
