@@ -33,6 +33,7 @@
             </div>
         </div>
 
+        @include('layouts/modal')
         @include('layouts/footer')
     </body>
 </html>
