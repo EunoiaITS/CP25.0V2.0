@@ -45,6 +45,14 @@
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Manage Users
                     </a>
+                    <a href="{{ url('/admin/qurans') }}" class="<?php if($page_name == 'qurans') echo 'active'; ?>">
+                        <i class="fa fa-dashboard fa-fw"></i> 
+                        Quran
+                    </a>
+                    <a href="{{ url('/admin/hadiths') }}" class="<?php if($page_name == 'hadiths') echo 'active'; ?>">
+                        <i class="fa fa-dashboard fa-fw"></i> 
+                        Hadith
+                    </a>
                 </li>
             </ul>
         </div>

@@ -32,6 +32,8 @@ Route::get('/logout', 'UsersController@logout');
 // Admin routes
 Route::get('/admin', 'AdminController@index');
 Route::resource('/admin/users', 'AdminUsersController');
+Route::resource('/admin/qurans', 'AdminQuransController');
+Route::resource('/admin/hadiths', 'AdminHadithsController');
 
 Route::get('/author', 'AuthorController@index');
 Route::get('/subscriber', 'SubscriberController@index');
