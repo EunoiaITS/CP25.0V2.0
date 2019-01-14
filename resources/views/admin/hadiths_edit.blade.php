@@ -22,7 +22,7 @@
 	            <div class="panel-heading">
 	                <div class="panel-title" >
 	                    <i class="fa fa-plus-circle"></i>
-	                    Create New Hadith
+	                    Edit Hadith
 	                </div>
 	            </div>
 	            <div class="panel-body">

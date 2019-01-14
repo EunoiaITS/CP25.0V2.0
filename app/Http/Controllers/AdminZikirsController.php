@@ -8,7 +8,7 @@ use Auth;
 use App\Content_detail;
 use App\Content;
 
-class AdminHadithsController extends Controller
+class AdminZikirsController extends Controller
 {
     public function __construct() {
         $this->middleware('is_admin');
@@ -21,9 +21,9 @@ class AdminHadithsController extends Controller
     public function index()
     {
         $page_data = [
-            'page_name' => 'hadiths',
-            'page_title' => 'Hadith',
-            'hadiths' => Content::where('type', 'hadith')->get()
+            'page_name' => 'zikirs',
+            'page_title' => 'Zikir',
+            'zikirs' => Content::where('type', 'zikir')->get()
         ];
 
         return view(Auth::user()->role . '/' . $page_data['page_name'], compact('page_data'));
@@ -37,8 +37,8 @@ class AdminHadithsController extends Controller
     public function create()
     {
         $page_data = [
-            'page_name' => 'hadiths_create',
-            'page_title' => 'Create Hadith'
+            'page_name' => 'zikirs_create',
+            'page_title' => 'Create Zikir'
         ];
 
         return view(Auth::user()->role . '/' . $page_data['page_name'], compact('page_data'));
@@ -53,22 +53,20 @@ class AdminHadithsController extends Controller
     public function store(Request $request)
     {
         $content_input = [
-            'type' => 'hadith',
-            'trans_arabic' => $request->trans_arabic,
-            'trans_eng' => $request->trans_eng,
-            'trans_malay' => $request->trans_malay
+            'type' => 'zikir',
+            'title' => $request->title
         ];
 
         $content = Content::create($content_input);
 
-        $keys = ['kitab', 'bab', 'vol', 'page', 'hadith_no'];
+        $keys = [];
 
         foreach($keys as $key)
             $content->details()->create(['key' => $key, 'value' => $request->$key]);
 
-        $request->session()->flash('success_message', 'Hadith created successfully!');
+        $request->session()->flash('success_message', 'Zikir created successfully!');
 
-        return redirect('/admin/hadiths');
+        return redirect('/admin/zikirs');
     }
 
     /**
@@ -91,9 +89,9 @@ class AdminHadithsController extends Controller
     public function edit($id)
     {
         $page_data = [
-            'page_name' => 'hadiths_edit',
-            'page_title' => 'Edit Hadith',
-            'hadith' => Content::findOrFail($id)
+            'page_name' => 'zikirs_edit',
+            'page_title' => 'Edit Zikir',
+            'zikir' => Content::findOrFail($id)
         ];
 
         return view(Auth::user()->role . '/' . $page_data['page_name'], compact('page_data'));
@@ -109,22 +107,20 @@ class AdminHadithsController extends Controller
     public function update(Request $request, $id)
     {
         $content_input = [
-            'trans_arabic' => $request->trans_arabic,
-            'trans_eng' => $request->trans_eng,
-            'trans_malay' => $request->trans_malay
+            'title' => $request->title
         ];
 
         $content = Content::findOrFail($id);
         $content->update($content_input);
 
-        $keys = ['kitab', 'bab', 'vol', 'page', 'hadith_no'];
+        $keys = [];
 
         foreach($keys as $key)
             $content->details()->where('key', $key)->update(['value' => $request->$key]);
 
-        $request->session()->flash('success_message', 'Hadith updated successfully!');
+        $request->session()->flash('success_message', 'Zikir updated successfully!');
 
-        return redirect('/admin/hadiths');
+        return redirect('/admin/zikirs');
     }
 
     /**
@@ -137,8 +133,8 @@ class AdminHadithsController extends Controller
     {
         Content::destroy($id);
 
-        Session::flash('success_message', 'Hadith deleted successfully!');
+        Session::flash('success_message', 'Zikir deleted successfully!');
 
-        return redirect('/admin/hadiths');
+        return redirect('/admin/zikirs');
     }
 }

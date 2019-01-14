@@ -34,6 +34,8 @@ Route::get('/admin', 'AdminController@index');
 Route::resource('/admin/users', 'AdminUsersController');
 Route::resource('/admin/qurans', 'AdminQuransController');
 Route::resource('/admin/hadiths', 'AdminHadithsController');
+Route::resource('/admin/zikirs', 'AdminZikirsController');
+Route::resource('/admin/articles', 'AdminArticlesController');
 
 Route::get('/author', 'AuthorController@index');
 Route::get('/subscriber', 'SubscriberController@index');

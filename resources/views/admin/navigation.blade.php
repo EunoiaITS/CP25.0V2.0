@@ -53,6 +53,14 @@
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Hadith
                     </a>
+                    <a href="{{ url('/admin/zikirs') }}" class="<?php if($page_name == 'zikirs') echo 'active'; ?>">
+                        <i class="fa fa-dashboard fa-fw"></i> 
+                        Zikir
+                    </a>
+                    <a href="{{ url('/admin/articles') }}" class="<?php if($page_name == 'articles') echo 'active'; ?>">
+                        <i class="fa fa-dashboard fa-fw"></i> 
+                        Scientific Articles
+                    </a>
                 </li>
             </ul>
         </div>

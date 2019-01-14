@@ -25,7 +25,7 @@
     @else
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-	    		<h3 class="panel-title">Hadiths List</h3>
+	    		<h3 class="panel-title">Hadith List</h3>
 	  		</div>
 			<div class="panel-body">
 				<div class="table-responsive">
