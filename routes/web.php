@@ -36,6 +36,8 @@ Route::resource('/admin/qurans', 'AdminQuransController');
 Route::resource('/admin/hadiths', 'AdminHadithsController');
 Route::resource('/admin/zikirs', 'AdminZikirsController');
 Route::resource('/admin/articles', 'AdminArticlesController');
+Route::resource('/admin/manuscripts', 'AdminManuscriptsController');
+Route::resource('/admin/foods', 'AdminFoodsController');
 
 Route::get('/author', 'AuthorController@index');
 Route::get('/subscriber', 'SubscriberController@index');
