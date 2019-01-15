@@ -38,6 +38,8 @@ Route::resource('/admin/zikirs', 'AdminZikirsController');
 Route::resource('/admin/articles', 'AdminArticlesController');
 Route::resource('/admin/manuscripts', 'AdminManuscriptsController');
 Route::resource('/admin/foods', 'AdminFoodsController');
+Route::resource('/admin/events', 'AdminEventsController');
+Route::resource('/admin/advertisements', 'AdminAdvertisementsController');
 
 Route::get('/author', 'AuthorController@index');
 Route::get('/subscriber', 'SubscriberController@index');

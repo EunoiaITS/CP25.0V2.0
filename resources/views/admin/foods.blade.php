@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
+	<!-- <textarea class="summernote" id="summernote">Hello Summernote</textarea>
+	<a href="#" onclick="getText()">Summernote</a> -->
 
 	<ol class="breadcrumb">
 	  	<li><a href="{{ url('/admin') }}">Dashboard</a></li>
@@ -68,9 +70,9 @@
 						        		@endif
 							    	</td>
 							        <td>{{ $details['def_title'] }}</td>
-							        <td>{{ $details['definition'] }}</td>
+							        <td><?php echo $details['definition']; ?></td>
 							        <td>{{ $details['desc_title'] }}</td>
-							        <td>{{ $details['description'] }}</td>
+							        <td><?php echo $details['description']; ?></td>
 							        <td>
 							        	<a href="{{ url('/admin/foods/' . $food->id . '/edit') }}" class="btn btn-sm btn-default">
 			                                Edit
@@ -88,5 +90,11 @@
 			</div>
 		</div>
 	@endif
+
+	<script type="text/javascript">
+		function getText() {
+			alert($("#summernote").code());
+		}
+	</script>
 
 @endsection

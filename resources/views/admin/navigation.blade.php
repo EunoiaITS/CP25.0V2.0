@@ -77,6 +77,18 @@
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Scientific Articles
                     </a>
+                    <a href="{{ url('/admin/events') }}" class="<?php if($page_name == 'events' ||
+                        $page_name == 'events_create' || $page_name == 'events_edit')
+                        echo 'active'; ?>">
+                        <i class="fa fa-dashboard fa-fw"></i> 
+                        Events
+                    </a>
+                    <a href="{{ url('/admin/advertisements') }}" class="<?php if($page_name == 'advertisements' ||
+                        $page_name == 'advertisements_create' || $page_name == 'advertisements_edit')
+                        echo 'active'; ?>">
+                        <i class="fa fa-dashboard fa-fw"></i> 
+                        Advertisements
+                    </a>
                 </li>
             </ul>
         </div>

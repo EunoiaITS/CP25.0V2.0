@@ -68,9 +68,8 @@
 		                <div class="form-group">
 		                    <label for="field-1" class="col-sm-3 control-label">Definition</label>
 
-		                    <div class="col-sm-6">
-	                            <textarea style="resize: vertical;" class="form-control" name="definition"
-	                            	rows="3"></textarea>
+		                    <div class="col-sm-9">
+	                            <textarea class="form-control summernote" name="definition"></textarea>
 		                    </div>
 		                </div>
 
@@ -85,9 +84,8 @@
 		                <div class="form-group">
 		                    <label for="field-1" class="col-sm-3 control-label">Description</label>
 
-		                    <div class="col-sm-6">
-	                            <textarea style="resize: vertical;" class="form-control" name="description"
-	                            	rows="3"></textarea>
+		                    <div class="col-sm-9">
+	                            <textarea class="form-control summernote" name="description"></textarea>
 		                    </div>
 		                </div>
 
