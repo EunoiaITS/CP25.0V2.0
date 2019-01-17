@@ -45,7 +45,7 @@
 				    		<?php
 				    		$count = 1;
 				      		foreach($page_data['qurans'] as $quran) {
-				      			$details = ['verse_no', 'surah_id'];
+				      			$details = ['verse_no' => '', 'surah_id' => ''];
 				      			
 				      			foreach($quran->details()->get() as $detail)
 				      				$details[$detail->key] = $detail->value;

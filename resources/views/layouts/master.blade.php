@@ -12,7 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Naqli Aqli | {{$page_title}}</title>
+        <title>Naqli Aqli | <?php echo $page_title; ?></title>
 
         @include('layouts/header')
     </head>
@@ -24,7 +24,7 @@
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header" style="margin-top: 20px;">{{$page_title}}</h1>
+                        <h1 class="page-header" style="margin-top: 20px;"><?php echo $page_title; ?></h1>
                     </div>
                 </div>
                 

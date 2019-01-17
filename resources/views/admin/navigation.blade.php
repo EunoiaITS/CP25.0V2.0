@@ -41,50 +41,57 @@
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Admin Dashboard
                     </a>
-                    <a href="{{ url('/admin/users') }}" class="<?php if($page_name == 'users' ||
-                        $page_name == 'users_create' || $page_name == 'users_edit') echo 'active'; ?>">
+                    <a href="{{ url('/admin/users') }}" class="<?php if($page_name == 'users'
+                        || $page_name == 'users_create' || $page_name == 'users_edit') echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Manage Users
                     </a>
-                    <a href="{{ url('/admin/foods') }}" class="<?php if($page_name == 'foods' ||
-                        $page_name == 'foods_create' || $page_name == 'foods_edit') echo 'active'; ?>">
+                    <a href="{{ url('/admin/foods') }}" class="<?php if($page_name == 'foods'
+                        || $page_name == 'foods_create' || $page_name == 'foods_edit') echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Prophetic Food
                     </a>
-                    <a href="{{ url('/admin/qurans') }}" class="<?php if($page_name == 'qurans' ||
-                        $page_name == 'qurans_create' || $page_name == 'qurans_edit') echo 'active'; ?>">
+                    <a href="{{ url('/admin/qurans') }}" class="<?php if($page_name == 'qurans'
+                        || $page_name == 'qurans_create' || $page_name == 'qurans_edit') echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Quran
                     </a>
-                    <a href="{{ url('/admin/hadiths') }}" class="<?php if($page_name == 'hadiths' ||
-                        $page_name == 'hadiths_create' || $page_name == 'hadiths_edit') echo 'active'; ?>">
+                    <a href="{{ url('/admin/hadiths') }}" class="<?php if($page_name == 'hadiths'
+                        || $page_name == 'hadiths_create' || $page_name == 'hadiths_edit') echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Hadith
                     </a>
-                    <a href="{{ url('/admin/zikirs') }}" class="<?php if($page_name == 'zikirs' ||
-                        $page_name == 'zikirs_create' || $page_name == 'zikirs_edit') echo 'active'; ?>">
+                    <a href="{{ url('/admin/zikirs') }}" class="<?php if($page_name == 'zikirs'
+                        || $page_name == 'zikirs_create' || $page_name == 'zikirs_edit') echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Zikir
                     </a>
-                    <a href="{{ url('/admin/manuscripts') }}" class="<?php if($page_name == 'manuscripts' ||
-                        $page_name == 'manuscripts_create' || $page_name == 'manuscripts_edit')
+                    <a href="{{ url('/admin/manuscripts') }}" class="<?php if($page_name == 'manuscripts'
+                        || $page_name == 'manuscripts_create' || $page_name == 'manuscripts_edit')
                         echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Manuscript
                     </a>
-                    <a href="{{ url('/admin/articles') }}" class="<?php if($page_name == 'articles' ||
-                        $page_name == 'articles_create' || $page_name == 'articles_edit') echo 'active'; ?>">
+                    <a href="{{ url('/admin/articles') }}" class="<?php if($page_name == 'articles'
+                        || $page_name == 'articles_create' || $page_name == 'articles_edit') echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Scientific Articles
                     </a>
-                    <a href="{{ url('/admin/events') }}" class="<?php if($page_name == 'events' ||
-                        $page_name == 'events_create' || $page_name == 'events_edit')
+                    <a href="{{ url('/admin/keywords') }}" class="<?php if($page_name == 'keywords'
+                        || $page_name == 'keywords_create' || $page_name == 'keywords_edit'
+                        || $page_name == 'keywords_manage')
+                        echo 'active'; ?>">
+                        <i class="fa fa-dashboard fa-fw"></i> 
+                        Keywords
+                    </a>
+                    <a href="{{ url('/admin/events') }}" class="<?php if($page_name == 'events'
+                        || $page_name == 'events_create' || $page_name == 'events_edit')
                         echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Events
                     </a>
-                    <a href="{{ url('/admin/advertisements') }}" class="<?php if($page_name == 'advertisements' ||
-                        $page_name == 'advertisements_create' || $page_name == 'advertisements_edit')
+                    <a href="{{ url('/admin/advertisements') }}" class="<?php if($page_name == 'advertisements'
+                        || $page_name == 'advertisements_create' || $page_name == 'advertisements_edit')
                         echo 'active'; ?>">
                         <i class="fa fa-dashboard fa-fw"></i> 
                         Advertisements

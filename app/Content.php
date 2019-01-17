@@ -12,4 +12,8 @@ class Content extends Model
 	public function details() {
 		return $this->hasMany('App\Content_detail');
 	}
+
+	public function links() {
+    	return $this->hasMany('App\Link');
+    }
 }

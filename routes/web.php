@@ -39,6 +39,10 @@ Route::resource('/admin/manuscripts', 'AdminManuscriptsController');
 Route::resource('/admin/foods', 'AdminFoodsController');
 Route::resource('/admin/events', 'AdminEventsController');
 Route::resource('/admin/advertisements', 'AdminAdvertisementsController');
+Route::resource('/admin/keywords', 'AdminKeywordsController');
+Route::get('/admin/keywords/{id}/manage', 'AdminKeywordsController@manage');
+Route::post('/admin/keywords/link', 'AdminKeywordsController@link');
+Route::get('/admin/keywords/{id}/unlink', 'AdminKeywordsController@unlink');
 
 Route::get('/author', 'AuthorController@index');
 Route::get('/subscriber', 'SubscriberController@index');

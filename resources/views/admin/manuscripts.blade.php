@@ -59,8 +59,8 @@
 							        <td>{{ $details['page'] }}</td>
 							        <td>
 							        	@if($details['image'])
-								        	<img src="{{ url('/public/uploads') . '/' . $details['image'] }}" height="100"
-								        		alt="">
+								        	<img src="{{ url('/public/uploads') . '/' . $details['image'] }}"
+								        		height="100" alt="">
 						        		@endif
 							    	</td>
 							        <td><?php echo $manuscript->trans_arabic; ?></td>

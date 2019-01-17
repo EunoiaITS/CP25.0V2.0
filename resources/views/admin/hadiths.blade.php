@@ -2,29 +2,6 @@
 
 @section('content')
 
-	
-	<?php
-	Use App\Content;
-	echo '<pre>'; print_r(Content::where('type', 'quran')->get(['id'])->toArray());
-	$quran_ids = Content::where('type', 'quran')->get(['id'])->toArray();
-
-	echo '<pre>';
-	foreach($quran_ids as $id) {
-		
-		echo Content::where('id', $id)->firstOrFail()->trans_arabic . '<br>';
-		//echo Content::findOrFail($id);
-		//echo $content->trans_arabic;
-		//$content = Content::findOrFail($id);
-		//print_r($content);
-		// foreach($content as $quran) {
-			
-		// 	echo $quran['trans_arabic'] . '<br>';
-		// }
-		//echo $content->trans_arabic . '<br>';
-	}
-	?>
-	
-
 	<ol class="breadcrumb">
 	  	<li><a href="{{ url('/admin') }}">Dashboard</a></li>
 	  	<li class="active">Manage Hadith</li>
@@ -71,7 +48,8 @@
 				    		<?php
 				    		$count = 1;
 				      		foreach($page_data['hadiths'] as $hadith) {
-				      			$details = ['kitab' => '', 'bab' => '', 'vol' => '', 'page' => '', 'hadith_no' => ''];
+				      			$details = ['kitab' => '', 'bab' => '', 'vol' => '', 'page' => '',
+				      				'hadith_no' => ''];
 				      			
 				      			foreach($hadith->details()->get() as $detail)
 				      				$details[$detail->key] = $detail->value;

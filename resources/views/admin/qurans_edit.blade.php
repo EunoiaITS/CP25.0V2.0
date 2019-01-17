@@ -3,7 +3,7 @@
 @section('content')
 	@php
 		$quran 		= $page_data['quran'];
-		$details 	= ['verse_no', 'surah_id'];
+		$details 	= ['verse_no' => '', 'surah_id' => ''];
 				      			
 		foreach($quran->details()->get() as $detail)
 			$details[$detail->key] = $detail->value;

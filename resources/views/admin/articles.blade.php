@@ -55,7 +55,7 @@
 				      			?>
 						      	<tr>
 							        <td><?php echo $count++; ?></td>
-							        <td><?php echo $article->title; ?></td>
+						        	<td>{{ $article->title }}</td>
 							        <td>{{ $details['author'] }}</td>
 							        <td>{{ $details['url'] }}</td>
 							        <td>{{ $details['disease_1'] }}</td>
