@@ -35,7 +35,7 @@ class UsersController extends Controller
     public function logout() {
         Auth::logout();
     	return redirect()
-    		->to('/')
+    		->to('/login')
     		->with('success-message', 'You have logged out successfully !!!');
     }
 }

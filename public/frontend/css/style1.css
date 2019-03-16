@@ -1,0 +1,37 @@
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, 
+.table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #bfbfbf;
+    padding: 5px 10px;
+    font-size: 15px;
+    width: 5%;
+}
+.table-bordered h3{
+	margin:5px 0px;
+	font-size: 20px;
+}
+
+
+.nav-search{
+	margin-left: 10px;
+	margin-top: 8px;
+}
+.food_heading{
+	background-color: #4ec7c5;
+	text-align: center;
+	font-weight: bold;
+}
+.list-group-item.active{
+	background-color: #4ec7c5 !important;
+	border-color: #4ec7c5 !important;
+
+}
+.food_image,.food_table,.food_synonyms{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+@media only screen and (min-width: 800px) {
+    .top10{
+	margin-top: 50px;
+}
+}

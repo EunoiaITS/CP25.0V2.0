@@ -13,7 +13,28 @@
 // Route::get('/', function () {
 //     return view('users/login');
 // });
-Route::get('/', 'UsersController@login');
+
+// FRONTEND ROUTES
+Route::get('/', 'HomeController@index');
+Route::get('/about-us', 'HomeController@about_us');
+Route::get('/permission', 'HomeController@permission');
+Route::get('/team', 'HomeController@team');
+Route::get('/privacy-policy', 'HomeController@privacy_policy');
+Route::get('/contact', 'HomeController@contact');
+Route::get('/user-register', 'HomeController@register');
+Route::post('/user-register', 'HomeController@register');
+Route::post('/user-login', 'HomeController@login');
+Route::get('/user-logout', 'HomeController@logout')->middleware('is_subscriber');
+Route::get('/subscription', 'HomeController@subscription')->middleware('is_subscriber');
+Route::get('/company-registration', 'HomeController@company_registration');
+Route::get('/refund-policy', 'HomeController@refund_policy');
+Route::get('/forums', 'HomeController@forums');
+Route::get('/events', 'HomeController@events');
+Route::get('/events/{id}', 'HomeController@event_detail');
+Route::post('/search', 'HomeController@search');
+
+
+Route::get('/login', 'UsersController@login');
 
 Auth::routes();
 
